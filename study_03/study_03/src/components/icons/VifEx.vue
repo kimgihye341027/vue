@@ -16,9 +16,9 @@ const isAvailable = ref(true);
 const selectDate = ref("");
 </script>
 <template>
-  <div>
+  <div class="container">
     <!-- v-if v-show -->
-    <h2>v-if v-show</h2>
+    <h1>v-if v-show</h1>
     <button @click="isVisible = !isVisible">토글</button>
     <p v-if="isVisible">
       v-if: 조건이 true일 때만 표시 (조건이 false이면) DOM에서 완전히 제거됨
