@@ -1,8 +1,10 @@
 <script setup>
 import { ref } from "vue";
 import TodoList from "./TodoList.vue";
+import ExArr_ex from "./ExArr_ex.vue";
 // TodoList 화면 보이게
 const showTodoList = ref(false);
+const showArr = ref(false)
 </script>
 <template>
   <div class="wrap">
@@ -16,6 +18,10 @@ const showTodoList = ref(false);
     <hr />
     <div class="container">
       <h1>Array 공부</h1>
+      <button @click="showArr = !showArr">
+      {{ showArr ? "닫기" : "배열 예제보기" }}
+      </button>
+      <ExArr_ex v-if="showArr"/>
     </div>
   </div>
 </template>
