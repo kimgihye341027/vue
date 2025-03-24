@@ -1,4 +1,5 @@
 <script setup>
+import Tab from "@/components/Tab.vue";
 import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 const route = useRoute();
@@ -136,8 +137,7 @@ const comfirmBtn = () => {
             :key="index"
             :src="img"
             class="thumb"
-            @click="selectedImage = img"
-          />
+            @click="selectedImage = img" />
         </div>
       </div>
       <!-- 상품 정보 -->
@@ -174,6 +174,7 @@ const comfirmBtn = () => {
         </div>
       </div>
     </div>
+    <Tab />
   </div>
 </template>
 <style scoped>
@@ -182,7 +183,7 @@ const comfirmBtn = () => {
   gap: 20px;
   max-width: 800px;
   margin: auto;
-
+  padding: 20px 0;
   background-color: antiquewhite;
 }
 .main-image {
